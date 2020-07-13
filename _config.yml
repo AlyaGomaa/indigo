@@ -16,9 +16,9 @@ resume: false
 resume-external: false
 resume-url: https://google.com/?q=my+resume
 
-url: https://alyagomaa.github.io/blog
+url: https://alyagomaa.github.io/
 # your url: https://USERNAME.github.io
-
+baseurl: /blog
 permalink: /:title/
 
 # To enable google analytics, supply your token below
