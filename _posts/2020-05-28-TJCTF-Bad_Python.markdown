@@ -8,7 +8,6 @@ tag:
 - CTF
 - Reverse
 - Writeup
-star: false /*highlits it in green*/
 category: blog
 author: coreflood
 description: ~.~
