@@ -114,7 +114,6 @@ params: ``` string (str)```
 default return type: (str)
 
 ```python
-
 little_to_big_endian(hx,ret='default')
 ```
 params: ``` hx (any type)```
