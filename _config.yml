@@ -55,9 +55,9 @@ github: AlyaGomaa
 authors:
   coreflood:
     name: coreflood
-    bio: one-two-three-ten
-    external-image: false
-    picture: assets/images/profile.jpg
+    bio: Just another reverse engineer.
+    external-image: true
+    picture: https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/assets/images/profile.png
     #twitter: johndoe
   
 
