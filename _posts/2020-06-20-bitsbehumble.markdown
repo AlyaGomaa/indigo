@@ -1,8 +1,8 @@
 ---
 title: ":ramen: bitsbehumble"
 layout: post
-date: 2016-01-23 22:10
-tag: CTF Converter Python
+date: 2020-06-20 22:10
+tag: [CTF, Converter, Python]
 image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
 headerImage: false
 projects: true
