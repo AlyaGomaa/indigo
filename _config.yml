@@ -34,14 +34,14 @@ disqus:
   categories: #[blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: https://www.facebook.com/AlyyaGomaa
+facebook: AlyyaGomaa
 #twitter: 
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin: https://www.linkedin.com/in/alyagomaa/
+linkedin: alyagomaa/
 # youtube: myyoutube
 spotify: ag5132/
-github: https://github.com/AlyaGomaa
+github: AlyaGomaa
 # gitlab: mygitlab
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
@@ -50,7 +50,7 @@ github: https://github.com/AlyaGomaa
 #medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
-email: myemail@gmail.com
+#email: myemail@gmail.com
 
 authors:
   coreflood:
