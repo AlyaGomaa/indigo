@@ -4,7 +4,7 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p> Reverse Engineer / Malware Analysis Enthusiast</p>
+<p align="center"> Reverse Engineer / Malware Analysis Enthusiast </p>
 
 <h2>Projects</h2>
 
