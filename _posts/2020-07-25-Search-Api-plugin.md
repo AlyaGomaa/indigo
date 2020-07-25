@@ -1,5 +1,5 @@
 ---
-title: ":purple_heart: Search API IDA Plugin"
+title: ":purple_heart: Search-API Plugin for IDA"
 layout: post
 date: 2020-06-20 02:00
 tag: [Reverse, CTF, Python, Malware, Analysis]
