@@ -1,5 +1,5 @@
 ---
-title: ":purple_heart: bitsbehumble"
+title: "bitsbehumble"
 layout: post
 date: 2020-06-20 22:10
 tag: [CTF, Converter, Python]
