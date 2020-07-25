@@ -3,7 +3,7 @@ title: "Search-API Plugin for IDA"
 layout: post
 date: 2020-06-20 02:00
 tag: [Reverse, CTF, Python, Malware, Analysis]
-image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+image: https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/assets/images/profile.png #
 headerImage: false
 projects: true
 hidden: false # don't count this post in blog pagination
