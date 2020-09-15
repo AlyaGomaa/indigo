@@ -18,7 +18,7 @@ We're given a [program.txt](https://github.com/AlyaGomaa/blog/blob/gh-pages/_pos
 # Solution
 We're given some values that range from 0 to 255 and the file is called program.txt so it's probably shellcode
 
-so we convert these values to hex and store them in a file any hex editor.
+so we convert these values to hex and store them in a file using any hex editor.
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/Baby_Mult/binn.png)
 
 
