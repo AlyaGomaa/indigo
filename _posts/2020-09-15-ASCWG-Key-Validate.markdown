@@ -1,7 +1,7 @@
 ---
 title: "[Writeup] ASCWG2020 - Key Validate"
 layout: post
-date: 2020-04-27 22:48
+date: 2020-09-15 2:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
