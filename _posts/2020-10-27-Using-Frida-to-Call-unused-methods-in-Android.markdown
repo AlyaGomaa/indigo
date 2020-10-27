@@ -57,11 +57,11 @@ I'll be using jadx-gui to view the source code.
 
 If we take a look at the ```MainActivity``` class we'll see a method called ```decryptIfYouCan```, looking at the cross references we see that it's not called anywhere in the code so hooking it would be useless. it only calls ```finsh_the_work_plz``` and passes it a random number
 
-[](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/usage.png)
+![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/usage.png)
 
 to use frida we need to know the package name, it's listed in ```AndroidMainfest.xml``` 
 
-[](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/mainfest.png)
+![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/mainfest.png)
 
 To call a method that hasn't been called we need to know its class name (in this case ```MainActivity```),find an instance created by that class using frida's ``` Java.choose( packageName.className , callback functions) ```, and call the method on that instance.
 
@@ -105,7 +105,7 @@ Java.choose("com.example.random_random_randomly.MainActivity" , { //class name
 
 make sure the frida-server is running and then ``` frida -U com.example.random_random_randomly -l frida123.js ``` in a new terminal to run the script.
 
-[](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/flaag.png)
+![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/flaag.png)
 
 everything inside ```Java.perform``` will be injected into our app.
 
