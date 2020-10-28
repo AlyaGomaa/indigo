@@ -122,7 +122,9 @@ make sure the frida-server is running and then ``` frida -U com.example.random_r
 
 everything inside ```Java.perform``` will be injected into our app.
 
-i wrapped my code inside a giant try and catch because there are some integers that frida simply doesnt like and it crashes? probably a bug in frida
+i wrapped my code inside a giant try and catch because there are some integers that frida simply doesnt like and it crashes? probably a bug 
+
+some versions of frida throw a timeout error after 23 seconds of inactivity so update frida if you encounter that.
 
 
 > Data types are divided into two groups:
