@@ -59,6 +59,19 @@ If we take a look at the ```MainActivity``` class we'll see a method called ```d
 
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/usage.png)
 
+```finsh_the_work_plz``` uses the generated random number to get the encrypted data from a random cell in a database that has 20000 records in the apk and sends it along with the key and the IV to ```decrypt1``` and ```decrypt2``` to decrypt the flag.
+
+```
+  private String finsh_the_work_plz(int random_posstion) {
+        String sel = random_posstion + "";
+        String h1 = this.db.Getdata(sel, "half");
+        String IV1 = this.db.Getdata(sel, "IV");
+        String key = this.db.Getdata(sel, "key");
+        return this.de.decrypt2(this.de.hexStringToByteArray(this.de.decrypt1(this.db.Getdata(sel, "encrypted"), this.db.Getdata(h1, "IV"))), this.de.hexStringToByteArray(IV1), this.de.hexStringToByteArray(key));
+    }
+```
+since the challenge generates a random number in the range 0 to 15000 we can safely assume that the flag will be in the last 5000 cells (to speed up the bruteforce)
+
 to use frida we need to know the package name, it's listed in ```AndroidMainfest.xml``` 
 
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/frida-challenge/mainfest.png)
@@ -77,7 +90,7 @@ Java.choose("com.example.random_random_randomly.MainActivity" , { //class name
 	onMatch : function(instance){
 	 // This function will be called for every instance found by frida
   console.log("Instance: " + instance );
-	var i = 0
+	var i = 15001
 	while(1){// Bruteforce the random number
 
 		console.log(i)
@@ -110,6 +123,7 @@ make sure the frida-server is running and then ``` frida -U com.example.random_r
 everything inside ```Java.perform``` will be injected into our app.
 
 i wrapped my code inside a giant try and catch because there are some integers that frida simply doesnt like and it crashes? probably a bug in frida
+
 
 > Data types are divided into two groups:
 > - Primitive data types - includes byte, short, int, long, float, double, boolean and char
