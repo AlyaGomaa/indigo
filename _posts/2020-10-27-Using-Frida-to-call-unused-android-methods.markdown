@@ -1,5 +1,5 @@
 ---
-title: "Using Frida to Call unused methods in Android"
+title: "Using Frida to call unused android methods"
 layout: post
 date: 2020-10-27 07:00
 image: /assets/images/markdown.jpg
