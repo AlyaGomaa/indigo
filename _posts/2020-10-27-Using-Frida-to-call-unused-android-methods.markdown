@@ -11,8 +11,7 @@ author: coreflood
 description: ----
 ---
 
-Frida is a dynamic instrumentation toolkit that allows us to run javascript code inside android apks.
-
+Frida is a dynamic instrumentation toolkit that allows you to inject your own scripts into black box processes. Hook any function, spy on crypto APIs or trace private application code, no source code needed.
 
 # Installing Frida
 
