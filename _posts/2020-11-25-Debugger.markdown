@@ -12,5 +12,6 @@ category: project
 author: coreflood
 externalLink: false
 ---
+Gray Hat Python's PyDBG but in C++
 
 Check it out [here](https://github.com/AlyaGomaa/Debugger) :)
