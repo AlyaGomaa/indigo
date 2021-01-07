@@ -15,7 +15,7 @@ externalLink: false
 
 My trust issues made me code my own password manager. nothing fancy here.
 
-#Installation
+# Installation
 
 ```sudo apt install default-mysql-server``` install mysql
 
