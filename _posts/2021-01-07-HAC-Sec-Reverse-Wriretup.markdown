@@ -1,7 +1,7 @@
 ---
 title: "[Writeup] HACSEC - Reverse Engineering "
 layout: post
-date: 2021-01-06 10:00
+date: 2021-01-07 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
@@ -28,7 +28,7 @@ opening the file in ida we get
 
 
 first we need to pass the anti debugging function ptrace using a debugger to get to the function that downloads the image
-so we set a breakpoint at the ptrace call and when it's hit we change the eip to point to download_img
+so we set a breakpoint at the ptrace call and when it's hit we change the eip to point to ```download_img```
 
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/HAC-Sec-CTF-Writeups/3.png)
 
