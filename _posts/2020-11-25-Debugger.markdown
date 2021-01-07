@@ -1,7 +1,7 @@
 ---
 title: "Debugger"
 layout: post
-date: 2020-06-20 22:10
+date: 2020-11-25 02:00
 tag: [C++]
 image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
 headerImage: false
