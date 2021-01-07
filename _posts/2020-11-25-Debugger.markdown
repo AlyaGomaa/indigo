@@ -1,0 +1,16 @@
+---
+title: "Debugger"
+layout: post
+date: 2020-06-20 22:10
+tag: [C++]
+image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+headerImage: false
+projects: true
+hidden: false # don't count this post in blog pagination
+description: " "
+category: project
+author: coreflood
+externalLink: false
+---
+
+Check it out in Github [Debugger](https://github.com/AlyaGomaa/Debugger) :)
