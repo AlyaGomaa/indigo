@@ -1,5 +1,5 @@
 ---
-title: "[Writeup] HACSEC - Reverse Engineering "
+title: "[Writeup] HAC-Sec CTF - Reverse Engineering "
 layout: post
 date: 2021-01-07 10:00
 image: /assets/images/markdown.jpg
