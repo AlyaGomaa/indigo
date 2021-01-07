@@ -13,4 +13,4 @@ author: coreflood
 externalLink: false
 ---
 
-Check it out in Github [Debugger](https://github.com/AlyaGomaa/Debugger) :)
+Check it out [here](https://github.com/AlyaGomaa/Debugger) :)
