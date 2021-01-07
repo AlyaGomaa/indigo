@@ -13,6 +13,12 @@ author: coreflood
 description: "HAC-Sec CTF Reversing Writeup"
 ---
 
+- [Side B](#side-b)
+- [Math Head](#math-head)
+- [xchg](#xchg)
+- [Bibliotheque](#bibliotheque)
+
+
 # Side-B
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/HAC-Sec-CTF-Writeups/sideB.png)
 
@@ -51,7 +57,7 @@ now that we have the key we need the IV to get the flag
 
 to get the IV the program opens itself, reads 16 bytes from offset 1456 and xors each byte with 0x11
 
-to get the iv using the debugger we need to bypass the __debugbreak() which is another anti-debug technique 
+to get the iv using the debugger we need to bypass the ```__debugbreak()``` which is another anti-debug technique 
 
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/HAC-Sec-CTF-Writeups/6.png)
 
