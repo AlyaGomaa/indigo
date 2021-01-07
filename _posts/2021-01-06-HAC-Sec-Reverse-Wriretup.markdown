@@ -1,7 +1,7 @@
 ---
 title: "[Writeup] HACSEC - Reverse Engineering "
 layout: post
-date: 2020-09-11 02:00
+date: 2021-01-06 10:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag:
