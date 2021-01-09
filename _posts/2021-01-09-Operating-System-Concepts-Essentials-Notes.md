@@ -312,6 +312,6 @@ Address binding: means traslating VA (where the process thinks it is) to PA (in 
 We use paging so that the lookup table wont get very big.
 paging is deviding the ram to several blocks 4kB each 
 
-ram blocks are called pages, virtual memory block are calles frames 
 
+ram blocks are called frames, virtual memory block are calles pages 
 
