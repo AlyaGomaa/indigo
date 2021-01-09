@@ -40,10 +40,7 @@ Because **ROM cannot be changed**, only static programs, such as the bootstrap p
 **Load** -> loads from RAM to registers
 **Store** -> from regs to ram
 
-The CPU immediately executes from RAM
-storage order according to speed and cost:
-
-img
+The CPU immediately executes from RAM storage order according to speed and cost
 
 Volatile storage loses its content when the power is removed  like RAM
 
