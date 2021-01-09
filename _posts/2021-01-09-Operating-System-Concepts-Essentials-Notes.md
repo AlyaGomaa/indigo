@@ -60,7 +60,7 @@ multiprocessor systems (also known as parallel systems or multicore systems)
 **graceful degradation**: fault tolerant which means that the pc has to distribute tasks among the rest of the cores if one of them failed
 
 The multiple-processor systems in use today are of two types: 
-- **asymmetric multiprocessing **: the boss processor gives commands  and tasks to  other processors , can be implemented using hardware or software 
+- **asymmetric multiprocessing**: the boss processor gives commands  and tasks to  other processors , can be implemented using hardware or software 
 
 - **symmetric multiprocessing (SMP)** : means each processor performs a different task  
 
@@ -83,11 +83,11 @@ clustering : nafs 7war el distributed systems en kaza computer aw server mtwsl b
 
 clusters give very high computational power 
  
-**Parallelization : ** divides a program into separate components that run in parallel on individual cores in a computer, it can be implemented using hardware or software.
+**Parallelization :** divides a program into separate components that run in parallel on individual cores in a computer, it can be implemented using hardware or software.
  
 **storage-area networks (SANs)** allow many systems to attach to a pool of storage. provides access to consolidated, block-level data storage.
 
-**In time-sharing {multiprogramming} systems: ** the CPU executes multiple jobs by switching among them 
+**In time-sharing {multiprogramming} systems:** the CPU executes multiple jobs by switching among them 
 
 **software-generated interrupt** is caused either by an error (division by zero or invalid memory access) or by a syscall .
  
@@ -116,7 +116,7 @@ When a process terminates, the operating system will reclaim any reusable resour
 **firmware** used to be called **bios** , now it's called uefi or efi.  
 network cards , ssds , video cards all have firmware 
 
-changes made to the bios are stored in the **cmos chip **
+changes made to the bios are stored in the **cmos chip**
 
 uefi has a feature called **secure boot** that restricts any unsigned drivers from booting and protects the computer from rootkits 
 
@@ -126,7 +126,7 @@ uefi has a feature called **secure boot** that restricts any unsigned drivers fr
 
 we need VRAM bc main memory is too small and volatile 
  
-**tertiary-storage ** any removable media like usbs disks CDs theyre usually slower
+**tertiary-storage** any removable media like usbs disks CDs theyre usually slower
  
 when the cpu needs data it first checks the cache , if it's unable to find it there it stores it there.
 **chache memory** has an instruction cache that hhols the next instruction. without it the cpu would wait several cycles to fetch the instruction from RAM
@@ -135,12 +135,12 @@ registers are controlled by the compiler
 cache by the hardware 
 ram, ssd, disks by OS 
 
-**singly linked list: ** each item points to its successor 
+**singly linked list:** each item points to its successor 
 **doubly linked list:** either to its predecessor or to its successor 
 
 **bitmap :** binay string where every bit represents a  state 
 
-every **disk drive** is divided into several thousand individual units, called** disk blocks **
+every **disk drive** is divided into several thousand individual units, called **disk blocks**
  
 when **emulating a different CPU** evey instruction has its own function that gets executed on the actual CPU thats why its slower
  
@@ -160,7 +160,7 @@ a **LiveCD**--an OS thats boots and run from a CD-ROM without being installed on
 - Certain instructions could be executed 
 - hardware devices could only be accessed  
 
-**run-time support system: **(a set of functions built into libraries included with a compiler) 
+**run-time support system:**(a set of functions built into libraries included with a compiler) 
 
 A running program needs to be able to halt its execution either normally (**end()**) or abnormally (**abort()**). 
 
