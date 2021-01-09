@@ -1,5 +1,5 @@
 ---
-title: "Operating System Concepts Essentials Notes"
+title: "Operating System Concepts Essentials Notes (Part 1)"
 layout: post
 date: 2021-01-09 10:00
 image: /assets/images/markdown.jpg
@@ -251,4 +251,3 @@ When the remote procedure call  **(RPC)** is being invoked on a process on the s
 
  **strategies for communication in client­server systems** sockets, reamote procedure calls (RPCs), and pipes. 
 
-**asynchronous** vs **synchronous threading:**
