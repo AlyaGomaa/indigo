@@ -1,5 +1,5 @@
 ---
-title: "Operating System Concepts Essentials Notes (Part 1)"
+title: "Operating System Concepts Essentials Notes"
 layout: post
 date: 2021-01-09 10:00
 image: /assets/images/markdown.jpg
