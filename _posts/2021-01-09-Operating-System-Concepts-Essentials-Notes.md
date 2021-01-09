@@ -166,4 +166,92 @@ A running program needs to be able to halt its execution either normally (**end(
 
 ---
 
+####message passing vs shared memory  
 
+**msg passing :** if the client program wants to access a file The client program and service (file system in this case) never interact directly.they communicate  by exchanging messages with the microkernel. 
+
+**Match microkernel:** translates sys calls to msgs and passes them  between the microkernel and the userland 
+
+**loadable kernel modules:** for example, we might build CPU scheduling and memory management algorithms (core services) directly into the kernel and then add support for different file systems (dynamically) by way of loadable modules 
+
+**android** is based on linux but google tweaked it. 
+
+Memory was referred to as the “**core**” in the early days of computing. (core dump) 
+
+**“ISO” image** which is a file in the format of a CD-ROM or DVD-ROM. 
+
+
+computers dont store the entire os in ROM cuz everytime we need to update the os we're gonna have to change the ROM chip, instead they use** EEPROM** 
+
+
+**GRUB** is an example of an open-source bootstrap program for Linux systems. 
+
+A disk that has a boot partition is called a **boot disk or system disk.**
+
+job is an old name for process 
+
+process states : 
+**Ready:** ready for the CPU. 
+**Waiting:** for the i/o operation to complete 
+ 
+**pcb:** process control block has all the info about a certain process like the proc state, regs, list of open files and info about each thread.
+ 
+#### QUEUES: 
+
+**job queue :** all the processes in the system
+**ready queue:** processes that are in ram and ready to execute in the CPU 
+**device queue:** w8ing for a particular device. every device has a queue 
+**i/o queue:** w8ing to access a specific i/o device
+
+**short-term scheduler** ==CPU scheduler 
+**long term scheduler**==** job scheduler** = loads proccesses into memory  (ram scheduler)
+**medium term scheduler:** handles swapped out proccesses  (disks scheduler)
+
+**CPU scheduler:**selects from among the processes that are ready to execute and allocates the CPU to one of them  
+
+**interrupts** cause the operating system to change a CPU from its current task and to run a kernel routine 
+ 
+context switching: means taking a screenshot of the process and storing it in the PCB, switch to another process and then back again. aka suspend and then resume.
+
+PUSHAD w POPAD instructions take this screenshot
+
+**WaitForSingleObject:** parent will wait for the child to complete  
+
+
+A process that has terminated, but whose parent has not yet called wait(),is known as a** zombie**it means they're there in the process table but they have already terminated (no other process is waiting for it to terminate or knows its exit status)
+
+Once the parent calls** wait()** the pid of the zombie child is **released** (free for another proc) 
+(no longer a zombie)
+
+if a parent did not invoke wait() and instead terminated,  leaving its child processes as **orphans** 
+
+linux solves this by making **init (elroot process pid=0)** the parent of any orphaned process 
+
+**IPC models:** (a) Message passing. (b) Shared mem 
+
+**ipc :** interptocess communication 
+
+msg passing is faster because in shared mem we need to sync the cache and that takes time
+
+compiler - assembler – loader - linker (CALL) 
+
+**Chrome** identifies three different types of processes: browser, renderers, and plug-ins. 
+
+browser for the ui, 1 renederer proc for each open tab and one proc for each plugin 
+
+Message passing may be either **blocking** or **nonblocking** -also known as **synchronous** and **asynchronous** 
+ 
+when using **blocking** send and recieve : the process that sends the msg pauses execution and the receiver pauses until the msg arrives. 
+
+**0 capacity - no buffering :**means that the msg queue cannot have any msgs waiting in it 
+
+**message-passing** facility in **Windows** is called the advanced local procedure call **(ALPC)** in windows 
+
+**section object**: is a region of shared memory associated with the channel. 
+If the client determines that it does want to send** large messages**, it asks for a section object to be created 
+ 
+When the remote procedure call  **(RPC)** is being invoked on a process on the same system, **the RPC is handled indirectly through an ALPC **
+
+ **strategies for communication in client­server systems** sockets, reamote procedure calls (RPCs), and pipes. 
+
+**asynchronous** vs **synchronous threading:**
