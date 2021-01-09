@@ -94,7 +94,7 @@ that tells the os whether i'm in the userdefined code or the os code
  
 CPUs that support **virtualization** has a user mode, a kernel mode and another mode kman that has its own bit set whenever there's a VM running because it needs more privileges than user mode and less than the kernel mode.
 
-**Intel 64 family** of CPUs supports** four privilege levels (rings)** and supports virtualization but does not have a separate mode for virtualization. 
+**Intel 64 family** of CPUs supports **four privilege levels (rings)** and supports virtualization but does not have a separate mode for virtualization. 
  
 MS-DOS was written for the **Intel 8088 architecture** which has no mode bit. A user program can wipe out the operating system by writing over it with data. 
  
@@ -178,7 +178,7 @@ Memory was referred to as the “**core**” in the early days of computing. (co
 **“ISO” image** which is a file in the format of a CD-ROM or DVD-ROM. 
 
 
-computers dont store the entire os in ROM cuz everytime we need to update the os we're gonna have to change the ROM chip, instead they use** EEPROM** 
+computers dont store the entire os in ROM cuz everytime we need to update the os we're gonna have to change the ROM chip, instead they use **EEPROM** 
 
 
 **GRUB** is an example of an open-source bootstrap program for Linux systems. 
@@ -201,7 +201,7 @@ process states :
 **i/o queue:** w8ing to access a specific i/o device
 
 **short-term scheduler** ==CPU scheduler 
-**long term scheduler**==** job scheduler** = loads proccesses into memory  (ram scheduler)
+**long term scheduler**== **job scheduler** = loads proccesses into memory  (ram scheduler)
 **medium term scheduler:** handles swapped out proccesses  (disks scheduler)
 
 **CPU scheduler:**selects from among the processes that are ready to execute and allocates the CPU to one of them  
@@ -215,9 +215,9 @@ PUSHAD w POPAD instructions take this screenshot
 **WaitForSingleObject:** parent will wait for the child to complete  
 
 
-A process that has terminated, but whose parent has not yet called wait(),is known as a** zombie**it means they're there in the process table but they have already terminated (no other process is waiting for it to terminate or knows its exit status)
+A process that has terminated, but whose parent has not yet called wait(),is known as a**zombie**it means they're there in the process table but they have already terminated (no other process is waiting for it to terminate or knows its exit status)
 
-Once the parent calls** wait()** the pid of the zombie child is **released** (free for another proc) 
+Once the parent calls**wait()** the pid of the zombie child is **released** (free for another proc) 
 (no longer a zombie)
 
 if a parent did not invoke wait() and instead terminated,  leaving its child processes as **orphans** 
@@ -245,9 +245,9 @@ when using **blocking** send and recieve : the process that sends the msg pauses
 **message-passing** facility in **Windows** is called the advanced local procedure call **(ALPC)** in windows 
 
 **section object**: is a region of shared memory associated with the channel. 
-If the client determines that it does want to send** large messages**, it asks for a section object to be created 
+If the client determines that it does want to send **large messages**, it asks for a section object to be created 
  
-When the remote procedure call  **(RPC)** is being invoked on a process on the same system, **the RPC is handled indirectly through an ALPC **
+When the remote procedure call  **(RPC)** is being invoked on a process on the same system, **the RPC is handled indirectly through an ALPC**
 
  **strategies for communication in client­server systems** sockets, reamote procedure calls (RPCs), and pipes. 
 
