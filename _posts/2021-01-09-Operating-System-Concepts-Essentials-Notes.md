@@ -166,7 +166,7 @@ A running program needs to be able to halt its execution either normally (**end(
 
 ---
 
-####message passing vs shared memory  
+#### Message passing vs shared memory  
 
 **msg passing :** if the client program wants to access a file The client program and service (file system in this case) never interact directly.they communicate  by exchanging messages with the microkernel. 
 
