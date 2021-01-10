@@ -338,6 +338,8 @@ dlls are opened only once in the actual ram, but every process thinks it's opene
 
 demand paging: load pages only as they are needed. similar to swapping. we only swap pages that we need and swap them out wehen we run outta ram
 
+---
+
 Sector == block 
 
 a track consists of ->  clusters 
