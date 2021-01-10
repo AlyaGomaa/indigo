@@ -315,3 +315,56 @@ paging is deviding the ram to several blocks 4kB each
 
 ram blocks are called frames, virtual memory block are calles pages 
 
+
+The lookup table redirects the MMU to the corresponding page that has the wanted physical address
+
+Translation lookaside table: TLB resides in the cache memory. it has the virtual addresses that the mmu resolved recently 
+
+TLB hit (cache hit) means we found the address in the cache memory so the processor wont go to the ram. cache miss is the exact opposite
+
+when the MMU desnt find what its looking for in the ram or the cache , a page fault/segmentation fault happens
+
+swapping wont happen if there is enough ram available 
+
+fragmentation leads to storage space being "wasted", and in that case the term also refers to the wasted space itself, the solution to this is to give each process its own **non contiguous** (segmentation) address space
+
+another solution to the problem of external fragmentation is **compaction:** to shuffle the memory contents so as to place all free memory together in one large block 
+
+paging involves breaking  RAM into fixed-sized frames and breaking VRAM(virtual memory) into blocks of the same size called pages.
+
+every process has its own lookup table
+
+dlls are opened only once in the actual ram, but every process thinks it's opened in its own address space
+
+demand paging: load pages only as they are needed. similar to swapping. we only swap pages that we need and swap them out wehen we run outta ram
+
+Sector == block 
+
+a track consists of ->  clusters 
+a cluster consists of -> many sectors
+
+The head is responssible for reading and writing to disk  
+
+the head moves between different tracks 
+the time it takes to move between diff tracks - > seek time
+diff sectors: rotational latency
+
+**A cluster** is the smallest logical amount of disk space that can be allocated to hold a file 
+
+cluster sizes range from 1 sector (512 B) to 128 sectors (64 KiB) 
+
+Disk scheduling:  
+
+- First come first server (FCFS)  
+- shortest seek time first  (SSF) to avoid head movement 
+- SCAN
+- C SCAN – similar to scan but rewinds when reaches end 
+
+Mounting making the file accessable in a specific directory for users.
+
+File attributes: name , identifier , type , location , size …
+
+Identifier: usually a number, identifies the file within the file system; it is the non-human-readable name for the file. 
+
+
+
