@@ -31,9 +31,29 @@ how do **software** and **hardware** make events/interrupts/traps/break points?
 
 **When an interrupt occurs**, each interrupt has a specific number in a table of interrupt type, function pointers and device number. the CPU checks that table before executing the function associated with the interrupt
 
+
 **RAM** commonly is implemented in a semiconductor technology called dynamic random-access memory **(DRAM)**
 
+DRAM: this memory must be constantly refreshed (thousands of times per second) to retain its contents.  
+
+SRAM: used in cpu caches. Faster , more expensive, uses more power 
+
 electrically erasable programmable read-only memory,  **EEPROM** , it can be changed. in smartphones it stores their factory-installed Programs
+
+Three types of ROM:  
+
+1. Programmable ROM (PROM)  
+
+2. Erasable programmable ROM (EPROM)  
+
+3. Electrically erasable programmable ROM (EEPROM) 
+
+
+Two types of partitions: 
+
+• Primary partition (used for OS files) 
+
+• Extended partition 
 
 Because **ROM cannot be changed**, only static programs, such as the bootstrap program are stored there.
 
@@ -44,7 +64,9 @@ The CPU immediately executes from RAM storage order according to speed and cost
 
 Volatile storage loses its content when the power is removed  like RAM
 
-from ssd downwars -> non volatile 
+<img src="https://www2.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter1/1_4_StorageDeviceHierarchy.jpg" width="450"/>
+
+from ssd downwards -> non volatile 
 
 Typically, operating systems have a device driver for each device controller. [one for the GRAPHICS CARD , KEYBOARD ETC..] 
 
@@ -207,7 +229,8 @@ process states :
 **CPU scheduler:**selects from among the processes that are ready to execute and allocates the CPU to one of them  
 
 **interrupts** cause the operating system to change a CPU from its current task and to run a kernel routine 
- 
+
+<img src="https://www.researchgate.net/profile/Maysoon_Mohammed/publication/337448111/figure/fig1/AS:828144391053313@1574456417824/Queuing-Diagram-for-Scheduling-in-OS.png" width="450"/>
 context switching: means taking a screenshot of the process and storing it in the PCB, switch to another process and then back again. aka suspend and then resume.
 
 PUSHAD w POPAD instructions take this screenshot
