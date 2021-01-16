@@ -339,21 +339,23 @@ dlls are opened only once in the actual ram, but every process thinks it's opene
 demand paging: load pages only as they are needed. similar to swapping. we only swap pages that we need and swap them out wehen we run outta ram
 
 ---
+![](http://storageprocess.weebly.com/uploads/1/7/3/1/17314496/3956138.png?371)
 
 Sector == block 
 
 a track consists of ->  clusters 
-a cluster consists of -> many sectors
+a cluster consists of -> many track sectors
 
 The head is responssible for reading and writing to disk  
 
 the head moves between different tracks 
 the time it takes to move between diff tracks - > seek time
-diff sectors: rotational latency
+diff sectors -> rotational latency
 
 **A cluster** is the smallest logical amount of disk space that can be allocated to hold a file 
 
-cluster sizes range from 1 sector (512 B) to 128 sectors (64 KiB) 
+Cluster sizes range from 1 sector (512 B) to 128 sectors (64 KiB) , each cluster can hold data from only one file at any one
+time 
 
 Disk scheduling:  
 
