@@ -43,11 +43,8 @@ electrically erasable programmable read-only memory,  **EEPROM** , it can be cha
 Three types of ROM:  
 
 1. Programmable ROM (PROM)  
-
 2. Erasable programmable ROM (EPROM)  
-
 3. Electrically erasable programmable ROM (EEPROM) 
-
 
 Two types of partitions: 
 
@@ -66,7 +63,8 @@ Volatile storage loses its content when the power is removed  like RAM
 
 <img src="https://www2.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/images/Chapter1/1_4_StorageDeviceHierarchy.jpg" width="450"/>
 
-from ssd downwards -> non volatile 
+from SSD downwards -> non volatile 
+At the beginning of its usage, SSD suffered from a major disadvantage, which was the limited number of write cycles it had.
 
 Typically, operating systems have a device driver for each device controller. [one for the GRAPHICS CARD , KEYBOARD ETC..] 
 
@@ -393,5 +391,7 @@ File attributes: name , identifier , type , location , size …
 
 Identifier: usually a number, identifies the file within the file system; it is the non-human-readable name for the file. 
 
+if we have a text file of 11 KB, it will occupy one cluster (assuming the cluster size is 32 KB); the remaining storage size (21 KB) will stay untouched and
+is called slack space.
 
 
