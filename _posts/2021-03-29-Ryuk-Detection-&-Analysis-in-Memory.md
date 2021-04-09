@@ -49,7 +49,7 @@ nothing interesting was found here
 
 ```vol -f test.raw --profile=Win7SP1x64 handles -p 2344 -t mutant```
 
-shows that it creates 5 mutexes
+shows that it creates 5 mutexes , google says they're malicious, found in ```Gozi Trojan `` 
 
 ![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/ryuk/3.png)
 
@@ -77,13 +77,18 @@ seems malicious?
 #### dlls
 
 ```vol -f test.raw --profile=Win7SP1x64 dlllist -p 2344 ```
+
 shell32.dll: gui stuff
+
 propsys.dll : related to search indexing in windows
+
 setupapi.dll: a library which installers and setup applications use. so this process is probably a dropper?
 
 
 0x00000000752e0000             0xc000             0xffff 2021-03-31 22:06:22 UTC+0000   C:\Windows\syswow64\CRYPTBASE.dll
+
 0x0000000074750000            0x16000                0x1 2021-03-31 22:07:49 UTC+0000   C:\Windows\system32\CRYPTSP.dll
+
 0x00000000771e0000           0x11d000                0x1 2021-03-31 22:08:50 UTC+0000   C:\Windows\syswow64\CRYPT32.dll
 
 it's using cryptographic libraries so it's probably the process responsible for encrypting?
