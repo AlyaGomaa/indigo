@@ -120,6 +120,7 @@ so it's basically granting full access to all users on all files/folders in ```C
 
 
 ### netscan
+
 ?????
 
 ```vol -f test.raw --profile=Win7SP1x64 netscan```
