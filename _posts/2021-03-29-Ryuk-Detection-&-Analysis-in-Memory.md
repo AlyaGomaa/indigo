@@ -114,9 +114,17 @@ so it's basically granting full access to all users on all files/folders in ```C
 ## Process 2424 and 1380 and 2488
  has no interesting files/keys/mutants
 
+## getlastmodkey output
+
+![](https://raw.githubusercontent.com/AlyaGomaa/blog/gh-pages/_posts/ryuk/7.png)
 
 
+### netscan
+?????
 
+```vol -f test.raw --profile=Win7SP1x64 netscan```
+
+0x8d1d97f0         UDPv4    0.0.0.0:60162                  *:*                                   1984     clJeKATValan.e 2021-03-31 23:53:12 UTC+0000
 
 
 
