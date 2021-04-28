@@ -88,7 +88,7 @@ to check run this command
 curl -d 'username=admin&password=admin' http://localhost:9000/management/auth
 ```
 
-if everything's good you should get a token and continue to the *Testing the server* section , if not or if you need to see the server logs you need to
+if everything's good you should get a token and continue to the [Testing the server](#testing-the-server) section , if not or if you need to see the server logs you need to
 
 Go into the container:
 
@@ -114,6 +114,37 @@ you should get the token now.
 
 Now that the server's up and running, here's the python script to test it
 
+```python
+# Create a cabby client
+client = create_client('localhost',
+                        use_https = False,
+                        port = '1234',
+                        discovery_path='/services/discovery-a')
+client.set_auth(
+    username='admin',
+    password='admin',
+    # URL used to obtain JWT token
+    jwt_auth_url='/management/auth'
+)
+# Check the available services to make sure inbox service is there
+services = client.discover_services()
+print(f"Services: {services}")
+# Get the data that we want to send
+with open("examples/stix/stuxnet.stix.xml") as stix_file:
+    stix_data = stix_file.read()
+
+binding = 'urn:stix.mitre.org:xml:1.1.1'
+# URI is the path to the inbox service we want to use in the taxii server
+client.push(stix_data, binding,
+            collection_names=['collection-a'],
+            uri='/services/inbox-a')
+print(f"Successfully exported to TAXII server.")
+```
+save this in `OpenTAXII` dir and run, now you should see the services printed.
+
+to verify that the data is pushed, run this in your local computer:
+
+```taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin```
 
 
 
