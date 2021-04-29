@@ -1,6 +1,6 @@
 # main text of home
 name: ＣＯＲＥＦＬＯＯＤ
-bio: Reverse Engineering Blog.
+bio: Reverse Engineering Blog
 
 # twitter summary info
 description: ---
@@ -116,6 +116,7 @@ plugins:
   - jemoji
   - jekyll-admin
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 jekyll-mentions:
   base_url: https://github.com
@@ -136,3 +137,4 @@ exclude:
     "node_modules",
     "vendor",
   ]
+  

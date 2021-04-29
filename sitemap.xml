@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://alyagomaa.github.io/blog/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/blog/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/projects/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/about/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Create-and-test-your-own-TAXII-server/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Ryuk-Detection-&amp;-Analysis-in-Memory/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Operating-System-Concepts-Essentials-Notes/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/HAC-Sec-Reverse-Wriretup/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Using-Frida-to-call-unused-android-methods/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/ASCWG-Key-Validate/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/CSAW-Baby-Mult/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/MyDoom-A/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/redpwn-r1sc/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/TJCTF-Bad_Python/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/HouseplantCTF2020-Zip-a-Dee-Doo-Dah/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Password-Manager/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Debugger/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/bitsbehumble/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/Search-Api-plugin/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://alyagomaa.github.io/blog/tags/</loc>
+  <lastmod>2021-04-29T21:02:31+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
