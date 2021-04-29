@@ -23,7 +23,7 @@ Clone the repo because we're going to be changing some configurations instead of
 
 `git clone https://github.com/eclecticiq/OpenTAXII/tree/0.2.0` 
 
-# Modifying configuration files
+# Modify configuration files
 
 First we need to edit `examples/data-configuration.yml`
 
@@ -55,12 +55,12 @@ in the Dockerfile add this line under the `ENTRYPOINT` command
 COPY  examples/data-configuration.yml /data-configuration.yml	
 ```
 
-# Fixing Authentication error
+# Fix authentication error
 
 
 if you build and run the server now you'll probably get  ```401 Unauthorized```  (unless they fixed it in their github repo)
 
-basically because opentaxii will be treating your token as bytes and it's in fact a string
+basically because opentaxii is treating your token as bytes and it's in fact a string
 so let's fix that
 
 we need to edit ```opentaxii/management.py``` (this is where the authentication error is coming from)
@@ -88,39 +88,40 @@ Now that we have fixed everything, build and run the image:
 
 according to the documentation now the server *should* be available on `localhost:9000` 
 
-to check run this command 
+To check run this command 
 ```bash
  curl -d 'username=admin&password=admin' http://localhost:9000/management/auth
 ```
 
-if everything's good you should get a token and continue to the [Testing the server](#testing-the-server) section , if not or if you need to see the server logs you need to
+If everything's good you should get a token and continue to the [Testing the server](#testing-the-server) section , if not or if you need to see the server logs
 
 Go into the container:
 
-```buildoutcfg
+```bash
  docker exec -ti <container-id> bin/bash
 ```
 
 you can get the container id using ```docker ps```
 
-rerun the server using a different port:
-```
+Rerun the server using a different port:
+
+```bash
 gunicorn opentaxii.http:app --bind localhost:1234
 ```
-to test it, from your local computer run:
+To test it, from your local computer run:
 
-```buildoutcfg
+```bash
 curl -d 'username=admin&password=admin' http://localhost:1234/management/auth
 ```
 you should get the token now.
 
 
-# Testing the server
+# Test the server
 
 Now that the server's up and running, here's the python script to test it
 
 ```python
-# Create a cabby client
+from cabby import create_client
 client = create_client('localhost',
                         use_https = False,
                         port = '1234',
@@ -144,11 +145,15 @@ client.push(stix_data, binding,
             uri='/services/inbox-a')
 print(f"Successfully exported to TAXII server.")
 ```
-save this in `OpenTAXII` dir and run, now you should see the services printed.
+save this in the `OpenTAXII` dir and run, now you should see the services printed.
 
-to verify that the data is pushed, run this in your local computer:
+To verify that the data is pushed, run this in your local computer:
 
-```taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin```
+```bash
+taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin
+```
+
+you should get the contents of `examples/stix/stuxnet.stix.xml`
 
 
 
