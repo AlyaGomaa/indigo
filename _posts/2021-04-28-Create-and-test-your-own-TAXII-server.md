@@ -29,10 +29,13 @@ First we need to edit `examples/data-configuration.yml`
 
 Here you can edit the username and password of the default user
 
-I set  authentication_required of inbox_a to yes to test server authentication later
+NOTE: if you add a new user using the `opentaxii-create-account` command from inside the container, it won't take effect in the database.
+you'll have to rebuild the image with the new user added to `data-configutation.yml`
 
-Here's the edited part of `data-configuration.yml`
-```
+I set  `authentication_required` of `inbox_a` to `yes` to test server authentication later
+
+Here's the edited part of `data-configuration.yml`:
+```yaml
 services:
   - id: inbox_a
     type: inbox
@@ -77,15 +80,15 @@ return jsonify(token=token)
 Now that we have fixed everything, build and run the image:
 
 ```buildoutcfg
-docker build --no-cache  --network=host -t opentaxii  -f Dockerfile .
-docker run -d --network=host opentaxii
+ docker build --no-cache  --network=host -t opentaxii  -f Dockerfile .
+ docker run -d --network=host opentaxii
 ```
 
 according to the documentation now the server *should* be available on `localhost:9000` 
 
 to check run this command 
-```
-curl -d 'username=admin&password=admin' http://localhost:9000/management/auth
+```bash
+ curl -d 'username=admin&password=admin' http://localhost:9000/management/auth
 ```
 
 if everything's good you should get a token and continue to the [Testing the server](#testing-the-server) section , if not or if you need to see the server logs you need to
@@ -93,7 +96,7 @@ if everything's good you should get a token and continue to the [Testing the ser
 Go into the container:
 
 ```buildoutcfg
-docker exec -ti <container-id> bin/bash
+ docker exec -ti <container-id> bin/bash
 ```
 
 you can get the container id using ```docker ps```
@@ -105,7 +108,7 @@ gunicorn opentaxii.http:app --bind localhost:1234
 to test it, from your local computer run:
 
 ```buildoutcfg
-curl -d 'username=admin&password=admin' http://localhost:9000/management/auth
+curl -d 'username=admin&password=admin' http://localhost:1234/management/auth
 ```
 you should get the token now.
 
@@ -132,7 +135,6 @@ print(f"Services: {services}")
 # Get the data that we want to send
 with open("examples/stix/stuxnet.stix.xml") as stix_file:
     stix_data = stix_file.read()
-
 binding = 'urn:stix.mitre.org:xml:1.1.1'
 # URI is the path to the inbox service we want to use in the taxii server
 client.push(stix_data, binding,
