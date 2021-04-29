@@ -116,6 +116,7 @@ plugins:
   - jemoji
   - jekyll-admin
   - jekyll-paginate-v2
+  - jekyll-sitemap
 
 jekyll-mentions:
   base_url: https://github.com
@@ -137,6 +138,3 @@ exclude:
     "vendor",
   ]
   
-url: "https://alyagomaa.github.io/blog/" # the base hostname & protocol for your site
-plugins:
-  - jekyll-sitemap
