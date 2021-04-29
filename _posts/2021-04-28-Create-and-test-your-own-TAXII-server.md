@@ -29,8 +29,10 @@ First we need to edit `examples/data-configuration.yml`
 
 Here you can edit the username and password of the default user
 
-NOTE: if you add a new user using the `opentaxii-create-account` command from inside the container, it won't take effect in the database.
-you'll have to rebuild the image with the new user added to `data-configutation.yml`
+> **NOTE**: if you add a new user using the `opentaxii-create-account` command from inside the container, it won't take effect in the database.
+You'll have to rebuild the image with the new user added to `data-configutation.yml` or add the user directly in the database. 
+to access the database execute `sqlite3 /data/auth.db` from inside the container.
+
 
 I set  `authentication_required` of `inbox_a` to `yes` to test server authentication later
 
