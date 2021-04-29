@@ -1,6 +1,6 @@
 # main text of home
 name: ＣＯＲＥＦＬＯＯＤ
-bio: Reverse Engineering Blog.
+bio: Reverse Engineering Blog
 
 # twitter summary info
 description: ---
@@ -136,3 +136,7 @@ exclude:
     "node_modules",
     "vendor",
   ]
+  
+url: "https://alyagomaa.github.io/blog/" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
