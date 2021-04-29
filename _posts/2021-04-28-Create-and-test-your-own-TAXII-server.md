@@ -149,9 +149,7 @@ save this in the `OpenTAXII` dir and run, now you should see the services printe
 
 To verify that the data is pushed, run this in your local computer:
 
-```bash
-taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin
-```
+```taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin```
 
 you should get the contents of `examples/stix/stuxnet.stix.xml`
 
