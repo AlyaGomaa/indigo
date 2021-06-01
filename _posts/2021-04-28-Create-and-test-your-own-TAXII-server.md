@@ -21,7 +21,7 @@ I'll be using [EclecticIQ OpenTAXII](https://github.com/eclecticiq/OpenTAXII) in
 
 Clone the repo because we're going to be changing some configurations instead of running the `eclecticiq/opentaxii` image from docker hub
 
-`git clone https://github.com/eclecticiq/OpenTAXII/tree/0.2.0` 
+`git clone https://github.com/eclecticiq/OpenTAXII.git` 
 
 # Modify configuration files
 
