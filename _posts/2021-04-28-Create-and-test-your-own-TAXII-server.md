@@ -30,8 +30,8 @@ First we need to edit `examples/data-configuration.yml`
 Here you can edit the username and password of the default user
 
 > **NOTE**: if you add a new user using the `opentaxii-create-account` command from inside the container, it won't take effect in the database.
-You'll have to rebuild the image with the new user added to `data-configutation.yml` or add the user directly in the database. 
-to access the database execute `sqlite3 /data/auth.db` from inside the container.
+You'll have to rebuild the image with the new user added to `data-configuration.yml` or add the user directly in the database.
+To access the database execute `sqlite3 /data/auth.db` from inside the container.
 
 
 I set  `authentication_required` of `inbox_a` to `yes` to test server authentication later
@@ -149,18 +149,9 @@ save this in the `OpenTAXII` dir and run, now you should see the services printe
 
 To verify that the data is pushed, run this in your local computer:
 
+
+```pip3 uninstall cabby```
+
 ```taxii-poll --path http://localhost:1234/services/poll-a -c collection-a --username admin --password admin```
 
 you should get the contents of `examples/stix/stuxnet.stix.xml`
-
-
-
-
-
-
-
-
-
-
-
-
