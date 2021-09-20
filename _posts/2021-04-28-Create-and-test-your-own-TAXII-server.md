@@ -55,27 +55,6 @@ in the Dockerfile add this line under the `ENTRYPOINT` command
 COPY  examples/data-configuration.yml /data-configuration.yml	
 ```
 
-# Fix authentication error
-
-
-if you build and run the server now you'll probably get  ```401 Unauthorized```  (unless they fixed it in their github repo)
-
-basically because opentaxii is treating your token as bytes and it's in fact a string
-so let's fix that
-
-we need to edit ```opentaxii/management.py``` (this is where the authentication error is coming from)
-
-Replace this line
-
-```python
-return jsonify(token=token.decode('utf-8'))
-```
-
-with this:
-```python
-return jsonify(token=token)
-```
-
 
 # Build and run the server
 
