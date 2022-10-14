@@ -52,7 +52,7 @@ Now save and let's edit the `Dockerfile` to copy `data-configuration.yml` into t
 
 in the Dockerfile add this line under the `ENTRYPOINT` command
 ```buildoutcfg
-COPY  examples/data-configuration.yml /data-configuration.yml	
+COPY  examples/data-configuration.yml /input/data-configuration.yml	
 ```
 
 
